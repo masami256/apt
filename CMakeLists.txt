@@ -8,8 +8,6 @@ cmake_minimum_required(VERSION 3.4.0)
 include_directories(${PROJECT_BINARY_DIR}/include)
 
 
-enable_testing()
-
 option(WITH_DOC "Build documentation." OFF)
 option(USE_NLS "Localisation support." OFF)
 
@@ -230,7 +228,6 @@ add_subdirectory(completions)
 add_subdirectory(dselect)
 add_subdirectory(ftparchive)
 add_subdirectory(methods)
-add_subdirectory(test)
 
 if (USE_NLS)
 add_subdirectory(po)
