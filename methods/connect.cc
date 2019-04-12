@@ -32,6 +32,10 @@
 #include <unistd.h>
 
 // Internet stuff
+#ifndef AI_IDN
+#define AI_IDN 0x0040
+#endif
+
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>

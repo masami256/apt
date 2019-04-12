@@ -9,6 +9,7 @@
 #ifndef SRVREC_H
 #define SRVREC_H
 
+#include <sys/types.h>
 #include <string>
 #include <vector>
 #include <arpa/nameser.h>
