@@ -20,6 +20,7 @@
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/strutl.h>
 
+#include <array>
 #include <algorithm>
 #include <array>
 #include <iomanip>
