@@ -32,7 +32,6 @@ include(GNUInstallDirs)
 include(TestBigEndian)
 find_package(Threads REQUIRED)
 find_package(LFS REQUIRED)
-find_package(Iconv REQUIRED)
 
 find_package(Perl REQUIRED)
 
