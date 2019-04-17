@@ -28,6 +28,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <array>
 
 #include <ctype.h>
 #include <errno.h>
