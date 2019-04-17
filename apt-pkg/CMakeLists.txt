@@ -47,6 +47,7 @@ target_include_directories(apt-pkg
                                    $<$<BOOL:${ZSTD_FOUND}>:${ZSTD_INCLUDE_DIRS}>
                                    $<$<BOOL:${UDEV_FOUND}>:${UDEV_INCLUDE_DIRS}>
                                    ${ICONV_INCLUDE_DIRS}
+	                           contrib
 )
 
 target_link_libraries(apt-pkg
