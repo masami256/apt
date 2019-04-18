@@ -166,13 +166,13 @@ bool debSrcRecordParser::Files(std::vector<pkgSrcRecords::File> &F)
    for (std::vector<pkgSrcRecords::File2>::const_iterator f2 = F2.begin(); f2 != F2.end(); ++f2)
    {
       pkgSrcRecords::File2 f;
-#if __GNUC__ >= 4
+#if __GNUC__ >= 4 + (6 >= __GNUC_MINOR__)
 	#pragma GCC diagnostic push
 	#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
       f.MD5Hash = f2->MD5Hash;
       f.Size = f2->Size;
-#if __GNUC__ >= 4
+#if __GNUC__ >= 4 + (6 >= __GNUC_MINOR__)
 	#pragma GCC diagnostic pop
 #endif
       f.Path = f2->Path;
