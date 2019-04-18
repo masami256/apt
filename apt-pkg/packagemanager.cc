@@ -1012,13 +1012,14 @@ bool pkgPackageManager::SmartUnPack(PkgIterator Pkg, bool const Immediate, int c
 	    Install(Pkg,FileNames[Pkg->ID]) == false)
       return false;
 
+#if 0   
    if (Immediate == true) {
       // Perform immediate configuration of the package. 
          if (SmartConfigure(Pkg, Depth + 1) == false)
             _error->Error(_("Could not perform immediate configuration on '%s'. "
                "Please see man 5 apt.conf under APT::Immediate-Configure for details. (%d)"),Pkg.FullName().c_str(),2);
    }
-   
+#endif   
    return true;
 }
 									/*}}}*/
@@ -1110,7 +1111,7 @@ pkgPackageManager::OrderResult pkgPackageManager::OrderInstall()
             return Failed; 
       }
    }
-
+#if 0
    // Final run through the configure phase
    if (ConfigureAll() == false)
       return Failed;
@@ -1125,7 +1126,7 @@ pkgPackageManager::OrderResult pkgPackageManager::OrderInstall()
 	 return Failed;
       }
    }
-	 
+#endif	 
    return Completed;
 }
 // PM::DoInstallPostFork - compat /*{{{*/
