@@ -158,7 +158,7 @@ bool pkgSrcRecords::Parser::Files2(std::vector<pkgSrcRecords::File2> &F2)/*{{{*/
    for (std::vector<pkgSrcRecords::File>::const_iterator f = F.begin(); f != F.end(); ++f)
    {
       pkgSrcRecords::File2 f2;
-#if __GNUC__ >= 4
+#if __GNUC__ >= 4 + (6 >= __GNUC_MINOR__)
 	#pragma GCC diagnostic push
 	#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
@@ -166,7 +166,7 @@ bool pkgSrcRecords::Parser::Files2(std::vector<pkgSrcRecords::File2> &F2)/*{{{*/
       f2.Size = f->Size;
       f2.Hashes.push_back(HashString("MD5Sum", f->MD5Hash));
       f2.FileSize = f->Size;
-#if __GNUC__ >= 4
+#if __GNUC__ >= 4 + (6 >= __GNUC_MINOR__)
 	#pragma GCC diagnostic pop
 #endif
       f2.Path = f->Path;

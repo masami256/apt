@@ -137,7 +137,7 @@
 #endif
 #endif
 
-#if __GNUC__ >= 4
+#if __GNUC__ >= 4 + (6 >= __GNUC_MINOR__)
 	#define APT_IGNORE_DEPRECATED_PUSH \
 		_Pragma("GCC diagnostic push") \
 		_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")
